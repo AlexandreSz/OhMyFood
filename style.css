@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  padding: 16px 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1000;
+}
+.header__logo {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  margin: 0;
+}
+
+.local {
+  display: flex;
+  justify-content: center;
+  padding: 20px 16px;
+  background-color: #f3f3f3;
+  font-size: 18px;
+}
+.local__text {
+  font-weight: 400;
+}
+.local__icon {
+  margin-right: 16px;
+}
+
+.hero {
+  padding: 48px;
+  text-align: center;
+  background-color: #fafafa;
+}
+.hero__title {
+  margin: 0;
+}
+.hero__subtitle {
+  font-weight: 300;
+  margin: 24px 0 32px 0;
+}
+.hero__btn {
+  border: 0;
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 17.6px;
+  border-radius: 100px;
+  color: white;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.hero__btn:hover {
+  background-color: white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.hero__btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fonc {
+  padding: 32px 16px;
+}
+.fonc__title {
+  margin-top: 0;
+}
+.fonc__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: compteListe;
+}
+.fonc__item {
+  padding: 24px;
+  margin: 16px 0 16px 12px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  display: flex;
+  position: relative;
+}
+.fonc__item::before {
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
+  background: #9356DC;
+  height: 24px;
+  width: 24px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: -12px;
+}
+.fonc__icon {
+  margin-right: 16px;
+}
+
+/*# sourceMappingURL=style.css.map */
