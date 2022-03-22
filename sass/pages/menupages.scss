@@ -92,23 +92,23 @@
             display: grid;
             @media (min-width: 992px) {
                 grid-template-columns: repeat(3, 1fr);
-                column-gap: 1rem;
+                column-gap: 16px;
             }
         }
         
         .submenu {
             max-width: 100%;
             overflow: hidden;
-            padding: 0 1rem;
+            padding: 0 16px;
             &__title {
                 text-transform: uppercase;
                 position: relative;
-                padding-bottom: 0.5rem;
+                padding-bottom: 8px;
                 font-weight: normal;
                 &::after {
                     content: "";
-                    width: 3rem;
-                    height: 0.25rem;
+                    width: 48px;
+                    height: 4px;
                     background-color: $color-tertiary;
                     position: absolute;
                     left: 0;
@@ -139,11 +139,13 @@
             }
             &__title {
                 margin: 0;
+                white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
             }
             &__description {
                 margin: 0;
+                white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
             }
@@ -152,7 +154,39 @@
                 display: flex;
                 justify-content: flex-end;
                 align-items: flex-end;
-                padding-left: 0.5rem;
+                padding-left: 8px;
+            }
+            &__confirmation {
+                background-color: $color-tertiary;
+                margin: -1rem -5rem -1rem 1rem;
+                width: 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition-duration: 0.5s;
+                border-radius: 0 12px 12px 0;
+                opacity: 0;
+            }
+            &:hover &__confirmation {
+                margin-right: -16px;
+                opacity: 1;
+            }
+            &__wrapIcon {
+                height: 1.6rem;
+                width: 1.6rem;
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100px;
+                transform: rotate(180deg);
+                transition-duration: 0.8s;
+            }
+            &:hover &__wrapIcon {
+                transform: rotate(0);
+            }
+            &__icon {
+                color: $color-tertiary;
             }
         }
         
