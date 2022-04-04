@@ -29,6 +29,7 @@
 
 .local {
     display: flex;
+    align-items: center;
     justify-content: center;
     padding: 20px $appPadding;
     background-color: rgb(243, 243, 243);
